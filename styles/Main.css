@@ -58,6 +58,33 @@ button {
   border-radius: 5px;
   cursor: pointer;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
+  font-size: 1rem;
+  min-width: 120px;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+
+/* Medium screens */
+@media (max-width: 768px) {
+  button {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+    min-width: 100px;
+  }
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+  button {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+    width: 100%; /* full width to fit small screens */
+    min-width: auto;
+  }
 }
 h1,
 h2,
