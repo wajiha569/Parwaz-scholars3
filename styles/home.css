@@ -418,6 +418,18 @@ section.accomplishments {
   text-align: center;
 }
 
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+@media (max-width: 332px) {
+  .buttons {
+    flex-direction: column;
+    gap: 5rem;
+  }
+}
 /* Optional: adjust padding on smaller screens */
 @media (max-width: 600px) {
   .take-flight {
@@ -568,7 +580,7 @@ section.accomplishments {
   }
 
   .buttons {
-    gap: 0.8rem;
+    gap: 1rem;
   }
 
   .read-more-button {
@@ -638,7 +650,7 @@ section.accomplishments {
   }
 
   .buttons {
-    gap: 0.6rem;
+    gap: 1rem;
   }
 
   .card {
