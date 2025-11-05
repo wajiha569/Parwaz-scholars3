@@ -297,23 +297,52 @@
     </div>
   </footer>
   <script>
-    const menuBtn = document.getElementById('menuToggle');
-    const menu = document.getElementById('mobile-menu');
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const overlay = document.getElementById('menuOverlay');
+    const menuLinks = document.querySelectorAll('.page-link');
 
-    menuBtn.addEventListener('click', () => {
-      const isOpen = menuBtn.getAttribute('aria-expanded') === 'true';
-      menuBtn.setAttribute('aria-expanded', String(!isOpen));
-      menuBtn.classList.toggle('active', !isOpen);
-
-      // toggle menu visibility
-      if (!isOpen) {
-        menu.classList.add('open');
-      } else {
-        menu.classList.remove('open');
-      }
+    menuToggle.addEventListener('click', function() {
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', String(!isExpanded));
+      menuToggle.classList.toggle('active', !isExpanded);
+      mobileMenu.classList.toggle('show', !isExpanded);
+      overlay.classList.toggle('show', !isExpanded);
     });
 
+    const closeMenu = () => {
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.classList.remove('active');
+      mobileMenu.classList.remove('show');
+      overlay.classList.remove('show');
+    };
 
-  </script>
+    overlay.addEventListener('click', closeMenu);
+
+    menuLinks.forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+  });
+
+  const closeMenu = () => {
+  menuToggle.setAttribute('aria-expanded', 'false');
+  menuToggle.classList.remove('active');
+  overlay.classList.remove('show');
+
+  // Add closing class to trigger slide-out animation
+  mobileMenu.classList.add('closing');
+
+  // After animation ends, remove all visibility classes
+  mobileMenu.addEventListener('transitionend', function handler(e) {
+    if (e.propertyName === 'transform' && mobileMenu.classList.contains('closing')) {
+      mobileMenu.classList.remove('closing', 'show');
+      mobileMenu.removeEventListener('transitionend', handler);
+    }
+  });
+};
+</script>
+
+
 </body>
 </html>

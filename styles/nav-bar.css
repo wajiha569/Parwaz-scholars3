@@ -56,6 +56,73 @@
   z-index: 1001;
   min-width: 25px;
 }
+/* Default: hidden off-canvas */
+#mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 270px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: -4px 0 16px rgba(0, 0, 0, 0.25);
+  transform: translateX(120%); /* start slightly further off-screen */
+  opacity: 0;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.45s ease-out;
+  z-index: 999;
+  overflow-y: auto;
+  will-change: transform, opacity;
+}
+
+/* when visible */
+#mobile-menu.show {
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.45s ease-out;
+}
+
+/* Closing animation: smooth right to left when opening, left to right when closing */
+/* Use JS to toggle the show class and apply a closing class */
+#mobile-menu.closing {
+  transform: translateX(120%);
+  opacity: 0;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.45s ease-out;
+}
+
+/* overlay upgrade for smoother fade */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 998;
+  backdrop-filter: blur(1.5px);
+}
+#mobile-menu.closing {
+  transform: translateX(120%);
+  opacity: 0;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.45s ease-out;
+}
+.menu-overlay.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Hide menu on large screens */
+@media (min-width: 1204px) {
+  #mobile-menu,
+  .menu-overlay {
+    display: none;
+  }
+}
 
 .mobile-menu-toggle {
   display: flex;
