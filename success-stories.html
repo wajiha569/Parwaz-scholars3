@@ -187,16 +187,23 @@
   
   <!-- FOOTER -->
   <script>
-    // Mobile menu toggle functionality
     const menuBtn = document.getElementById('menuToggle');
+    const menu = document.getElementById('mobile-menu');
 
-      menuBtn.addEventListener('click', () => {
+    menuBtn.addEventListener('click', () => {
       const isOpen = menuBtn.getAttribute('aria-expanded') === 'true';
-      
-      // Toggle both the attribute and class together
       menuBtn.setAttribute('aria-expanded', String(!isOpen));
       menuBtn.classList.toggle('active', !isOpen);
-});
+
+      // toggle menu visibility
+      if (!isOpen) {
+        menu.classList.add('open');
+      } else {
+        menu.classList.remove('open');
+      }
+    });
+
+
   </script>
 </body>
 </html>
