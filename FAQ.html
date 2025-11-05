@@ -237,29 +237,16 @@
     
     
     <script>
-      // Mobile menu toggle functionality
-      document.addEventListener('DOMContentLoaded', function() {
-        const menuToggle = document.querySelector('.mobile-menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        menuToggle.addEventListener('click', function() {
-          const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-          menuToggle.setAttribute('aria-expanded', !isExpanded);
-          menuToggle.classList.toggle('active');
-          mobileMenu.classList.toggle('show');
-        });
-        
-        // Close mobile menu when clicking on a link
-        const menuLinks = document.querySelectorAll('.page-link');
-        menuLinks.forEach(link => {
-          link.addEventListener('click', function() {
-            menuToggle.setAttribute('aria-expanded', 'false');
-            menuToggle.classList.remove('active');
-            mobileMenu.classList.remove('show');
-          });
-        });
-      });
-  
-    </script>
+    // Mobile menu toggle functionality
+    const menuBtn = document.getElementById('menuToggle');
+
+      menuBtn.addEventListener('click', () => {
+      const isOpen = menuBtn.getAttribute('aria-expanded') === 'true';
+      
+      // Toggle both the attribute and class together
+      menuBtn.setAttribute('aria-expanded', String(!isOpen));
+      menuBtn.classList.toggle('active', !isOpen);
+});
+  </script>
   </body>
 </html>
