@@ -229,7 +229,6 @@ section.accomplishments {
 .accomplishments > * {
   height: auto !important;
   overflow: visible;
-  margin-right: 2rem;
 }
 
 .success-stories h2 {
