@@ -214,14 +214,6 @@
   justify-content: center;
   user-select: none;
 }
-
-.journey-item dd {
-  font-size: 1rem;
-  color: var(--gray-font-color);
-  margin: 0;
-  flex: 1 1 auto;
-  line-height: 1.5;
-}
 .journey-container dl {
   display: flex;
   flex-direction: column;
@@ -254,7 +246,7 @@
 
 .journey-item dd {
   font-size: 1rem;
-  color: var(--gray-font-color);
+  color: var(--text-main-purple);
   margin: 0;
   flex: 1 1 auto;
   line-height: 1.5;
@@ -300,7 +292,9 @@
 .impact .below-heading-small {
   color: white;
 }
-
+.journey-item dd{
+  color
+}
 .impact-text {
   max-width: 786px;
   min-width: 280px;
