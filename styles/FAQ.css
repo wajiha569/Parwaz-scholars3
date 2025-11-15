@@ -1,4 +1,7 @@
 @import "./Main.css";
+body {
+  padding-top: 60px;
+}
 /* FAQ Section */
 .faq-container {
   max-width: 800px;

@@ -1,5 +1,7 @@
 @import url("./Main.css");
-
+body {
+  padding-top: 60px;
+}
 .about-us {
   background-color: var(--light-purple-background);
   display: flex;

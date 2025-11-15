@@ -1,5 +1,7 @@
 @import "./Main.css";
-
+body {
+  padding-top: 60px;
+}
 .latest-news-container {
   padding: 3rem 2rem;
   display: flex;

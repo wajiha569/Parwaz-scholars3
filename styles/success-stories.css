@@ -1,5 +1,7 @@
 @import "./Main.css";
-
+body {
+  padding-top: 60px;
+}
 .success-container {
   display: flex;
   flex-direction: column;

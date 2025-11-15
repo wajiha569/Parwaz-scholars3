@@ -1,5 +1,7 @@
 @import "./Main.css";
-
+body {
+  padding-top: 60px;
+}
 /* Base Reset and Box Sizing */
 *,
 *::before,

@@ -40,9 +40,6 @@
   margin: 0;
   padding: 0;
 }
-body {
-  padding-top: 60px;
-}
 .logo {
   display: flex;
 }
