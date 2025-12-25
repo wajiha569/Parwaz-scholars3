@@ -50,7 +50,7 @@
     </div>
   </nav>
   
-  <!--INTRODUCTION-->
+    <!--INTRODUCTION (Improved UI)-->
   <section class="introduction" id="introduction">
     <div class="introduction-container">
       <p class="small-heading">Contact Us</p>
@@ -59,38 +59,78 @@
     </div>
   </section>
 
-
-  <!--CONTACT-->
-
+  <!--CONTACT (Improved UI & Added Form)-->
   <section class="contact-container">
-    <div class="contact-flex">
+    
+    <!-- Left Side: Contact Cards -->
+    <div class="contact-info-side">
       <div class="contacts">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail h-6 w-6 text-primary" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>
-        <h4>Email</h4>
-        <p class="main-contact">info@parwaazscholars.org</p>
-        <p class="secondary-contact">scholarships@parwaazscholars.org</p>
-        <p class="info">General inquiries and scholarship questions</p>
+        <div class="icon-box">
+          <i class="fa-solid fa-envelope fa-xl"></i>
+        </div>
+        <div class="flex-gap">
+          <h4>Email Us</h4>
+          <span class="main-contact">info@parwaazscholars.org</span>
+          <span class="main-contact">scholarships@parwaazscholars.org</span>
+          <p class="info">General inquiries and scholarship questions</p>
+        </div>
       </div>
+
       <div class="contacts">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone h-6 w-6 text-primary" aria-hidden="true"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
-        <h4>Phone</h4>
-        <p class="main-contact">+1 (555) 123-4567</p>
-        <p class="secondary-contact">+1 (555) 123-4568</p>
-        <p class="info">Call us during business hours</p>
+        <div class="icon-box">
+          <i class="fa-solid fa-phone fa-xl"></i>
+        </div>
+        <div class="flex-gap">
+          <h4>Call Us</h4>
+          <span class="main-contact">+92 334-9865396</span>
+          <span class="main-contact">+92 333-3255814</span>
+          <p class="info">Mon-Sat, 9:00 AM - 6:00 PM</p>
+        </div>
       </div>
+
       <div class="contacts">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin h-6 w-6 text-primary" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
-        <h4>Address</h4>
-        <p class="main-contact">Alamdar road, Quetta</p>
-        <p class="info">Address</p>
+        <div class="icon-box">
+          <i class="fa-solid fa-location-dot fa-xl"></i>
+        </div>
+        <div class="flex-gap">
+          <h4>Visit Us</h4>
+          <span class="main-contact">Alamdar Road, Quetta</span>
+          <p class="info">Our main administrative office</p>
+        </div>
+      </div>
+
+      <!-- Integrated Office Hours -->
+      <div class="office-hours">
+        <h4><i class="fa-regular fa-clock"></i> Office Hours</h4>
+        <div class="time flex-gap" style="text-align: right;">
+          <p style="margin:0; font-size: 0.8rem; opacity: 0.8;">Monday - Saturday</p>
+          <h3>9 AM - 6 PM</h3>
+        </div>
       </div>
     </div>
-    <div class="office-hours">
-      <h4 data-slot="card-title" class="leading-none flex items-center justify-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock h-5 w-5 text-primary" aria-hidden="true"><path d="M12 6v6l4 2"></path><circle cx="12" cy="12" r="10"></circle></svg>Office Hours</h4>
-      <div class="time">
-        <p>Monday - Saturday</p>
-        <h3>9:00 AM - 6:00 PM EST</h3>
-      </div>
+
+    <!-- Right Side: Contact Form (New Element for better UX) -->
+    <div class="contact-form-card">
+      <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem;">Send us a Message</h3>
+      <form action="#">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" placeholder="John Doe" required>
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="john@example.com" required>
+        </div>
+        <div class="form-group">
+          <label>Subject</label>
+          <input type="text" placeholder="How can we help?">
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea rows="5" placeholder="Your message here..." required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
     </div>
    
   </section>
@@ -230,3 +270,7 @@
 
 </body>
 </html>
+
+<!--
+FIX THE WHOLE UI
+-->
