@@ -78,16 +78,13 @@ body {
 
 .card-image {
   height: 240px;
-  width: 87%;
+  width: 100%;
   background-color: var(--light-purple-background);
   display: flex;
   color: #3a24ba;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  margin: 24px;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
 }
 
 .card-image img {
