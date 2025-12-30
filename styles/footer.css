@@ -495,3 +495,19 @@
     margin-bottom: 0.75rem;
   }
 }
+.footer-col h4::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 30px;
+  height: 2px;
+  background-color: var(--dark-purple-background);
+  border-radius: 2px;
+}
+.footer-col h4 {
+  color: var(--dark-purple-background);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  position: relative;
