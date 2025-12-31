@@ -340,9 +340,20 @@ body {
   }
 
   .page-link[href="apply-now.html"] {
-    margin: 20px 40px;
-    width: calc(100% - 80px);
-    text-align: center;
+    background-color: var(--dark-purple-background);
+    color: white;
+    padding: 16px 36px;
+    padding-top: 19px;
+    border: none;
+    border-radius: 14px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 10px 25px rgba(58, 36, 186, 0.25);
   }
 }
 @media (max-width: 1300px) {
